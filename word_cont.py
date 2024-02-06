@@ -20,7 +20,7 @@ def get_text(urls):
                 text += prose.get_text() + '\n'
     return text.lower()
 
-# regex patern to extract all words from text, returns list of words
+# regex pattern to match all words from text, returns list of words
 def get_words(text):
     pattern = r'\b[a-z\'-]+\b'
     words = re.findall(pattern, text)
