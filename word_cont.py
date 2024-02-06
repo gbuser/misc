@@ -8,6 +8,7 @@ def get_data(url):
     r = requests.get(url)
     return r.text
 
+# takes a list of urls and returns aconcatenated string of all "p", "h1" and "h2" text 
 def get_text(urls):
     text = ''
     for url in urls:
@@ -19,6 +20,7 @@ def get_text(urls):
                 text += prose.get_text() + '\n'
     return text.lower()
 
+# regex patern to extract all words from text, returns list of words
 def get_words(text):
     pattern = r'\b[a-z\'-]+\b'
     words = re.findall(pattern, text)
