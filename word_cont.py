@@ -8,7 +8,7 @@ def get_data(url):
     r = requests.get(url)
     return r.text
 
-# takes a list of urls and returns aconcatenated string of all "p", "h1" and "h2" text 
+# takes a list of urls and returns a concatenated string of all "p", "h1" and "h2" text 
 def get_text(urls):
     text = ''
     for url in urls:
